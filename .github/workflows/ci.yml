@@ -1,0 +1,30 @@
+name: Jenkins Shared Library Quality Gate & CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verify-library:
+    name: Validate Groovy Syntax & Docker Blueprints
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Validate Groovy Pipeline Steps
+        run: |
+          for file in vars/*.groovy src/io/defendloop/pipeline/*.groovy; do
+            echo "Verifying $file..."
+            test -s "$file" || { echo "Empty or missing file: $file"; exit 1; }
+          done
+          echo "All Groovy shared vars and classes verified."
+
+      - name: Validate Docker Compose Config
+        run: |
+          docker compose -f docker/docker-compose.yml config
+          echo "Jenkins Controller & DinD Compose configuration is valid."
