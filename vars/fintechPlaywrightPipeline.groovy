@@ -27,7 +27,7 @@ def call(Map config = [:]) {
                 steps {
                     echo "Cloning target FinTech WebApp for local headless testing..."
                     dir('fintech-payment-portal') {
-                        git url: 'https://github.com/vishalprajapati2k25/fintech-payment-portal.git', branch: 'main'
+                        git url: 'https://github.com/itfreesource-academy/fintech-payment-portal.git', branch: 'main'
                     }
                 }
             }
