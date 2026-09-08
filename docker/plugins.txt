@@ -1,0 +1,10 @@
+# Recommended Plugins for FinTech CI/CD Pipeline
+workflow-aggregator:latest
+git:latest
+docker-workflow:latest
+allure-jenkins-plugin:latest
+junit:latest
+htmlpublisher:latest
+ansicolor:latest
+slack:latest
+pipeline-stage-view:latest
