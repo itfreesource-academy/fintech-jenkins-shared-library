@@ -7,7 +7,7 @@
 
 An enterprise-grade **Jenkins Shared Library** written in Groovy, standardizing continuous integration quality gates, containerized Docker build agents, and automated test reporting for distributed FinTech architectures.
 
-Engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Automation & Tools Development Engineer*) to showcase production-grade DevOps and pipeline tooling.
+Engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Software Engineer | Cloud, DevOps & Distributed Systems*) to showcase production-grade DevOps and pipeline tooling.
 
 ---
 
